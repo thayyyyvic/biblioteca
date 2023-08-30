@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+  <title>Indicações de Livros</title>
+  <style>
+      /* Estilos CSS */
+      body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    
+    }
+
+    h1 {
+      text-align: center;
+      color: #fff;
+    }
+
+    .book-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .book {
+      width: 250px;
+      margin: 10px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(47, 0, 255, 0.1);
+      overflow: hidden;
+      border: 1px solid #ccc;
+      transition: box-shadow 0.3s ease;
+      padding: 5px;
+    }
+
+    .book:hover {
+      box-shadow: 0 19px 28px rgba(0, 0, 0, 0.2);
+    }
+
+    .book:hover img {
+      transform: scale(1.1);
+    }
+
+    .book:hover ~ .book:not(:hover) {
+      filter: blur(4px); /* Desfoca os demais livros */
+    }
+
+    .book:hover ~ .book:not(:hover) .book-title {
+      opacity: 0.5; /* Reduz a opacidade dos títulos dos demais livros */
+    }
+
+    
+
+    .book img {
+      width: 100%;
+      height: auto;
+    }
+
+    .book-title {
+      text-align: center;
+      margin: 10px 0;
+      color: #333;
+    }
+
+    #borda {
+    border: 9px solid red;
+    border-radius: 25px;
+    background-color: #201b2c;
+    padding: 18px;
+    width: 69%;
+    margin: 0%;
+    margin-top: 3vh;
+    margin-left: 202px;
+  }
+
+  </style>
+</head>
+<body style="background-color: #201b2c;">
+  <div style="width: 80%; height: 102%; background-color: #201b2c; margin: auto; border: 14px solid red;">
+  <h1 id="borda">INDICAÇÕES DE LIVROS</h1>
+  <div class="book-container">
+    <div class="book">
+      <a target="_blank" href="https://books.googleusercontent.com/books/content?req=AKW5QaebG0ah-rtlJ47DgsQpDKYEWO1vNlX260VpeQE1tMK07bV0z4-dToL4ZYZxLo7rS-zbZJp5AGVPVLO5117P2ZMLEATMB8B989aB09PApZneLrJRkjaT6jGXXVkyF1pX6M0a9mlm1_I19ZG6x_DDSWlERHXMHLjVYLqOo_kNn1CQFVHYzUavDqDp3bAsC9BtvGb0PSyVk90QKWme-bqLqsTj1NyAaZc7rsj-hWhV9YdwBCn40HQ9UdTAx_1RM9Y1VSJiLAdW">
+      <img src="quincas.jpeg" alt="Livro 1">
+      <h2 class="book-title">Indicação para Vestibular! </h2>
+    </a>
+    </div>
+    <div class="book">
+      <a target="_blank" href="http://objdigital.bn.br/Acervo_Digital/Livros_eletronicos/iracema.pdf">
+      <img src="iracema.jpeg" alt="Livro 2">
+      <h2 class="book-title">Indicação para Vestibular!</h2>
+    </a>
+    </div>
+    <div class="book">
+      <a target="_blank" href="https://books.googleusercontent.com/books/content?req=AKW5Qad3xb3I5Js8jP1AyIia6izYIOwTJob4pdZHkXXu6m8nUKXAUV9C4LpXNWyHtCkbONxKL4AQsb02r9EJm7f6NE33npdc1_Pd3tzGyPIGpq7WgQzWPW1fQgWL6R-ctRZUx30XgTQdwU65Mk1R4Mvz6AouxXnTDaJm32M7N_MGFogN79DFsRPamKD9T8wTLXa4nUON6voR-rEbpIEoJqIBjZE3zKv813FQ3F7_SZC-KbBntLQdhh-Nc0x6eBIQ2QJ9dGXaijLh">
+      <img src="casa.jpeg" alt="Livro 3">
+      <h2 class="book-title">Indicação para Vestibular!</h2>
+    </a>
+    </div>
+    <div class="book">
+      <a target="_blank" href="https://teatroemescalahome.files.wordpress.com/2021/06/o_pagador_de_promessas_-_dias_gomes.pdf">
+      <img src="pagador.jpeg" alt="Livro 3">
+      <h2 class="book-title">Indicação para Vestibular!</h2>
+    </a>
+    </div>
+    <div class="book">
+      <a target="_blank" href="https://metavest.com.br/livros/negrinha-Monteiro-Lobato.pdf">
+      <img src="negrinha.jpeg" alt="Livro 3">
+      <h2 class="book-title">Indicação para Vestibular!</h2>
+    </a>
+    </div>
+    <div class="book">
+      <a target="_blank" href="https://ddcus.org/pdf/summer_reading/11th_grade/Dom_Casmurro-Machado_de_Assis.pdf">
+      <img src="dom.jpeg" alt="Livro 3">
+      <h2 class="book-title">Indicação para Vestibular!</h2>
+    </a>
+    </div>
+    <div class="book">
+      <a target="_blank" href="https://www.curso-objetivo.br/vestibular/obras_literarias/Gil_Vicente/auto_da_barca_do_inferno.pdf">
+      <img src="barca.jpeg" alt="Livro 3">
+      <h2 class="book-title">Indicação para Vestibular!</h2>
+    </a>
+    </div>
+    <!-- Adicione mais livros conforme necessário -->
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sty.css">
+    <title>Esqueceu senha</title>
+</head>
+<body>
+    <form onsubmit="return enviarEmail()">
+        <div class="main-login">
+            <div class="left-login">
+                <h1>Recupere sua senha<br></h1>
+                <img src="esque.svg" class="left-login-image" alt="livros">
+            </div>
+            <div class="right-login">
+                <div class="card-login">
+                    <div class="textfield">
+                        <label for="email">Informe seu email</label>
+                        <input type="text" name="email" id="email" placeholder="Informe seu email">
+                    </div>
+                    <button type="submit" class="btn-login">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        function enviarEmail() {
+            var email = document.getElementById('email').value;
+
+            if (email.trim() === "") {
+                alert('Por favor, digite seu email');
+                return false;
+            }
+
+            // Simulação de envio do email de redefinição de senha
+            alert('Um email de redefinição de senha foi enviado para: ' + email);
+            return true;
+        }
+    </script>
+</body>
+</html>

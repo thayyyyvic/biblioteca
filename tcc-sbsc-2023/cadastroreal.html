@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sty.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <form onsubmit="return validarCadastro()">
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Crie uma conta <br>  </h1>
+            <img src="cada.svg" class="left-login-image" alt="livros">
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+
+                <div class="textfield">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" placeholder="Nome">
+                </div>
+
+                <div class="textfield">
+                    <label for="email">Melhor email</label>
+                    <input type="text" name="email" id="email"  placeholder="Email">
+                </div>
+
+                <div class="textfield">
+                    <label for="criasenha">Crie uma senha</label>
+                    <input type="password" name="senha" id="criasenha" placeholder="Crie uma senha">
+                </div>
+
+                <div class="textfield">
+                    <label for="csenha">Confirme a senha</label>
+                    <input type="password" name="csenha" id="confirmasenha" placeholder="Confirme a senha">
+                </div>
+
+                <div class="textfield">
+                    <label for="serie">Série</label>
+                    <input type="text" name="serie" id="serie" placeholder="Série">
+                </div>
+
+                <button type="submit" class="btn-login">Criar</button>
+                
+            </div>
+        </div>
+    </div>
+    </form>
+
+    <script>
+        function validarCadastro() {
+            var nome = document.getElementById('nome').value;
+            var email = document.getElementById('email').value;
+            var senha = document.getElementById('criasenha').value;
+            var confirmarSenha = document.getElementById('confirmasenha').value;
+            var serie = document.getElementById('serie').value;
+
+            if (nome.trim() === "") {
+                alert('Por favor, insira o nome');
+                return false;
+            }
+
+            if (email.trim() === "") {
+                alert('Por favor, insira o email');
+                return false;
+            }
+
+            if (senha.trim() === "") {
+                alert('Por favor, insira a senha');
+                return false;
+            }
+
+            if (confirmarSenha.trim() === "") {
+                alert('Por favor, confirme a senha');
+                return false;
+            }
+
+            if (senha !== confirmarSenha) {
+                alert('As senhas não coincidem');
+                return false;
+            }
+
+            if (serie.trim() === "") {
+                alert('Por favor, insira a série');
+                return false;
+            }
+
+            // O formulário está válido, pode ser enviado
+            return true;
+        }
+    </script>
+<script>
+        function validar(){
+      
+      var Mensagem = "";
+      var txtPrimeiroNome = document.getElementById('nome').value;
+      var txtSobreNome = document.getElementById('sobre').value;
+      var txtMelhorEmail = document.getElementById('email').value;
+      var txtCurso = document.getElementById('curso').value;
+      var txtCrieumaSenha = document.getElementById('senha').value;
+      
+      
+      
+
+      if(txtPrimeiroNome == ""){
+          Mensagem  = Mensagem + "-Primeiro Nome\n" 
+      }
+
+      if(txtSobreNome == ""){
+          Mensagem  = Mensagem + "-Sobre Nome\n" 
+      }
+
+      if(txtMelhorEmail == ""){
+          Mensagem  = Mensagem + "-Melhor Email\n" 
+      }
+
+      if(txtCrieumaSenha == ""){
+          Mensagem  = Mensagem + "-Crie uma senha\n" 
+      }
+
+      if(txtCurso == ""){
+          Mensagem  = Mensagem + "-Curso\n" 
+      }
+
+      
+
+
+      
+      if(Mensagem != ""){
+              // alert("Preencha os Campos abaixo:\n" + Mensagem)
+              Swal.fire('Complete os Campos Abaixo:\n' + Mensagem)
+      }
+
+      else{
+          // alert("Cadastrado com Sucesso")
+          Swal.fire({
+          icon: 'success',
+          title: 'Cadastrado com Sucesso',
+          
+          showConfirmButton: false,
+          
+          })
+
+          document.getElementById("hdnCadastro").value = 1;
+          form.submit();
+      }
+  }
+
+
+
+      </script>

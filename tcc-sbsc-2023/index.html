@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sty.css">
+    <title>Login</title>
+</head>
+<body>
+    <form onsubmit="return validarLogin()">
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Faça login<br> E aprimore seu conhecimento </h1>
+            <img src="login.svg" class="left-login-image" alt="livros">
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <div class="textfield">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" name="usuario" id="usuario" placeholder="Usuário">
+                </div>
+
+                <div class="textfield">
+                    <label for="usuario">Senha</label>
+                    <input type="password" name="senha" id="senha"  placeholder="Senha">
+                </div>
+
+                <button type="submit" class="btn-login">Login</button>
+                <a style="text-decoration: none; color: rgb(232, 51, 51);"  href="esquecesenhareal.html">Esqueceu a senha</a> <br> <br>
+                <a style="text-decoration: none; color: rgb(232, 51, 51);" href="cadastroreal.html">Cadastre-se</a> 
+                 
+            </div>
+        </div>
+    </div>
+    </form>
+
+    <script>
+        function validarLogin() {
+            var usuario = document.getElementById('usuario').value;
+            var senha = document.getElementById('senha').value;
+
+            if (usuario === "thayna123@gmail.com" && senha === "16112005") {
+                alert('Sucesso');
+                location.href = "homereal.html";
+            } else {
+                alert('Usuário ou senha incorretos');
+            }
+
+            // Retornar false para evitar o envio do formulário
+            return false;
+        }
+    </script>
+</body>
+</html>

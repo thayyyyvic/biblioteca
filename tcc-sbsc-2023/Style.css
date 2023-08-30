@@ -1,0 +1,42 @@
+*{
+
+    margin: 0 auto;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+
+#Menu {
+    list-style: none;
+    padding: 0 ;
+    background-color: black;
+}
+
+#Menu li {
+
+    display: inline;
+
+
+}
+
+#Menu li a {
+
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+    transition: background 1s;
+
+
+}
+
+#Menu li a:hover {
+
+    background-color: plum;
+    
+
+}
+
+.form-img{
+
+    right: auto;
+}

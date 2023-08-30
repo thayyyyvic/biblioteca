@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Biblioteca Virtual </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const sliderContainer = document.querySelector(".slider-container");
+      const images = sliderContainer.querySelectorAll("li");
+  
+      let currentIndex = 0;
+  
+      // Função para exibir a imagem atual
+      function showImage(index) {
+        images.forEach(function(image, i) {
+          if (i === index) {
+            image.classList.add("active");
+          } else {
+            image.classList.remove("active");
+          }
+        });
+      }
+  
+      // Função para avançar para a próxima imagem
+      function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+      }
+  
+      // Adiciona evento de clique em cada imagem
+      images.forEach(function(image, index) {
+        image.addEventListener("click", function() {
+          currentIndex = index;
+          showImage(currentIndex);
+        });
+      });
+  
+      // Intervalo para trocar automaticamente as imagens
+      setInterval(nextImage, 3000);
+    });
+  </script>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #201b2c;
+  }
+
+  header {
+    background-color: red;
+    padding: 20px;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .nav li {
+    margin: 0 10px;
+  }
+
+  .nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+  }
+
+  section {
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  #hero {
+    background-image: url(booku.img);
+    background-size: cover;
+    background-position: center;
+  }
+
+  #hero h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: beige;
+    border: 1px solid #000;
+    border-radius: 25px;
+    background-color: red;
+    padding: 7px;
+    width: 35%;
+    margin: auto;
+  }
+
+  #hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: beige;
+    border: 1px solid #000;
+    border-radius: 25px;
+    background-color: red;
+    padding: 9px;
+    width: 45%;
+    margin-inline: auto;
+  }
+
+  #hero .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: beige;
+    border: 1px solid #000;
+    border-radius: 25px;
+    background-color: red;
+    padding: 7px;
+    width: 35%;
+    margin: auto;
+  }
+
+  section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #fff;
+    border-radius: 25px;
+    background-color: #201b2c;
+    padding: 9px;
+    width: 45%;
+    margin-inline: auto;
+    border: 5px solid red;
+  }
+
+  section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  section li {
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+    border: 1px solid #000;
+    border-radius: 25px;
+    background-color: bisque;
+    padding: 9px;
+    width: 45%;
+    margin-inline: auto;
+  }
+
+  section form {
+    margin-top: 20px;
+    width: 50%;
+    margin-left: 26%;
+  }
+
+  section input,
+  section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  section .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #DC143C;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  footer {
+    background-color: #201b2c;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
+
+  .slider-container img {
+    display: block;
+    margin: 0 auto;
+    max-width: 70%;
+    height: auto;
+  }
+
+  .slider-container li {
+    display: none;
+  }
+
+  .slider-container li.active {
+    display: block;
+  }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="nav">
+
+      <ul>
+        <li><a  style="animation: none; text-decoration: none;"href="livros.html">Livros</a></li>
+        <li><a  style="animation: none; text-decoration: none;" href="serie.html">Séries</a></li>
+        <li><a  style="animation: none; text-decoration: none;"href="indicações.html">Indicações</a></li>
+        <li><a  style="animation: none; text-decoration: none;"href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h1>Bem-vindo à nossa Biblioteca Virtual (SBSC) </h1>
+    <br>
+    <p>Você vai descobrir que esse é o melhor lugar para achar PDFs dos livros didáticos para você.</p>
+    
+  </section>
+
+  <br>
+  <br>
+
+  <div class="swiffy-slider">
+    <ul class="slider-container">
+      <li><img src="livro6.jpeg" style="width: 1300px;height: 400px;"></li>
+      <li><img src="livro7.webp" style="width: 1300px;height: 400px;"></li>
+      <li><img src="livro8.jpeg" style="width: 1300px;height: 400px;"></li>
+    </ul>
+  </div>
+  <section id="Sobre nós">
+    <h2>Sobre nós</h2>
+    <br>
+    <p>Nossa equipe tem como maior objetivo abordar uma biblioteca online facilitando a vida dos
+      estudantes ajudando com seus livros devido ao peso e a grande quantidade de matérias,
+      para que não cause prejuízos ao físico do estudante assim o aluno não precisará ficar carregando
+      o livro consigo prejudicando sua saúde.
+    </p>
+  </section>
+  
+
+  <footer>
+    <p style="color: crimson;">&copy; 2023 Meu Site. SBSC sua biblioteca virtual.</p>
+  </footer>
+</body>
